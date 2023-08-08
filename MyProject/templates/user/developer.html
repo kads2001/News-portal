@@ -1,0 +1,24 @@
+
+{% extends 'base.html' %}
+{% block title %}
+Developer Details
+{% endblock %}
+{% load static %}
+{% block x %}
+<div class="fs-2 text-center" xmlns="http://www.w3.org/1999/html">Developer<b class="text-primary">Details<i class="fa-solid fa-login"></i></b></br></br>
+</div>
+
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 text-center">
+        <img src="{% static 'images/depimg.jpg' %}" height="200px" width="200px"/></br></br>
+        <b>Name</b>YADAV ADESH</br>
+        <b>College:</b>PRASAD POLYTECHNIC JAUNPUR</br>
+        <b>Branch:</b>COMPUTER SCIENCE & ENGINEERING</br>
+
+        <b>Qualification</b>DIPLOMA</br>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+{% endblock %}

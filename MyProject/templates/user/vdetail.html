@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}
+video details
+{% endblock %}
+{% block x %}
+<style>
+.txt
+{
+  height:55px;
+}
+</style>
+<div class="fs-2 text-center">video<b class="text-mycolor">in</b></div>
+
+<div class="row ">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        {% for x in vdata %}
+        <div class="row">
+            <div class="card">
+                <iframe class="w-100" style="min-height:380px;" src="{{x.vlink}}" title="YouTube player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="card-body">
+                    <h5 class="card-title">{{x.vhead}}</h5>
+                    <b>{{x.vcategory}}</b>
+                    <p class="card-title">{{x.vdec | safe}}</p>
+                    <span class="btn btn-outline-danger">
+                       {{x.vdate}}
+                    </span>
+                    <br/>
+
+                     <span class="btn btn-outline-danger">
+                        {{x.vcity}}
+                    </span>
+
+                </div>
+            </div>
+        </div>
+       {% endfor %}
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+ {% endblock %}

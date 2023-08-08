@@ -1,0 +1,47 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}
+ viewnews
+{% endblock %}
+{% block x %}
+
+<div class="fs-2 text-center">News<b class="text-mycolor">views</b></div>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="row">
+            <!--start news-->
+              {% for x in ndata %}
+                <div class="col-sm-4">
+                     <div class="card">
+                       <img src="/{{x.npic}}" class="img-card-top"/>
+
+
+                <div class="card-body">
+                    <a href="/user/details?n={{x.id}}" style="text-decoration:none;color:black;"><h5>{{x.category}}</h5></a>
+
+                    <a href="/user/details?n={{x.id}}" style="text-decoration:none;color:black;"><b>{{x.nhead}}</b><br></a>
+                    <a href="/user/details?n={{x.id}}" style="text-decoration:none;color:black;"><i>{{x.ntitle}}</i></a>
+                    <br>
+
+
+                    <a href="/user/details?n={{x.id}}" class="btn-sm bg-mycolor">viewmore</a>
+                    <a href="#" class="btn-sm bg-dark text-light">
+                        <span class="text-muted ">{{x.ncity}}</span>
+                    </a>
+                    <span class="float-end">
+                        <i class="fa-solid fa-celendar-days"></i>{{x.ndate}}
+                    </span>
+
+
+                </div>
+                     </div>
+            </div>
+                     {% endfor %}
+            <!--end news-->
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+{% endblock x %}

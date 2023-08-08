@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <title>
+    {% block title %}
+
+    {% endblock %}
+
+</title>
+    <link rel="icon"  href="{%static 'images/news72.png'%}" type="image/jfif" sizes="16*16" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="{%static 'css/all.css'%}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+
+
+    <style>
+
+
+        .bg-mycolor {
+            background:#0d6efd;
+        }
+        .text-mycolor {
+            background:#0d6efd;
+        }
+        .sicon {
+        padding:2px;
+        color:#000000;
+        border-radius:8px;
+
+
+
+        }
+        .sicon:hover {
+            background:;
+            transform:scale(1.1);
+            transition: all .3s ease;
+            color:;
+
+        }
+        .ufooter{
+        min-heigth:45px;
+        background:#1e2022;
+
+        color:white;
+        front-size:14px;
+
+        }
+        .bfooter
+        {
+        min-height:50px;
+        background:#0d6efd;
+        line-height:50px;
+        color:white;
+        front-size:28px;
+        border-top:1px solid white;
+        }
+        .bfooter a
+        {
+        text-decoretion:none;
+        color:black;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container-fluid p-0">
+    <div class="row top bg-mycolor text-white p-2">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5">
+            <i class="fa-solid fa-newspaper" style="color:black;"></i> <i class="text-black"> indianews123@gmail.com</i>
+        </div>
+        <div class="col-sm-5">
+            <a href="https://www.facebook.com/techpilelko"> <i class="fa-brands fa-facebook sicon"></i></a>
+            <a href="https://www.youtube.com/c/Techpilelko"> <i class="fa-brands fa-youtube sicon"></i></a>
+            <a href="https://twitter.com/TechpileL?t=y3k0IKmSIu47LUwC2TAnaA&s=08"><i
+                    class="fa-brands fa-twitter sicon"></i></a>
+            <a href="https://www.instagram.com/tptlko/"> <i class="fa-brands fa-instagram sicon"></i></a>
+            <a href="https://www.instagram.com/tptlko/"> <i class="fa-solid fa-envelope sicon"></i></a>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+    <div class="row header py-1 sticky-top bg-light">
+        <div class="col-sm-4 logo fs-3 text-center" >
+            INDIA <b class="text-mycolor px-1 sicon">NEWS24</b><i class="fa-solid fa-newspaper"></i>
+        </div>
+        <div class="col-sm-8 menu ">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                            <li class="nav-item">
+                                <a class="nav-link active sicon" aria-current="page" href="/user/index/"><i
+                                        class="fa-solid fa-home "></i>Home</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link sicon" href="/user/about/"><i
+                                        class="fa-solid fa-user "></i>Aboutus</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link sicon" href="/user/news/"><i
+                                        class="fa-solid fa-newspaper"></i>News</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle sicon" href="/user/gallery/" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-images"></i>
+                                    <i class="fa-solid fa-image"></i>Gallery
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item sicon" href="/user/gallery/">Image Gallery</a></li>
+                                    <li><a class="dropdown-item sicon" href="/user/video/">Video Gallery</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link sicon" href="/user/contact/"> <i class="fa-solid fa-envelope"></i>Contact</a>
+                            </li>
+                            <li><a class="nav-link sicon" href="/admin/"><i class="fa-solid fa-key"></i>signin</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="row content bg-light min-height-28px;">
+
+        <div class="col-sm-12 py-2">
+            {% block x %}
+
+            {% endblock %}
+        </div>
+    </div>
+
+    <div class="row ufooter">
+
+            <div class="col-sm-4 bg-dark text-white p-5">
+                <b> INDIA</b> <b class="text-mycolor px-1"> news24 </b><i class="fa-solid fa-newspaper"></i> <br/>
+                Fake news is cheap to produce. Genuine journalism is expensive.
+
+
+
+            </div>
+            <div class="col-sm-4 bg-dark p-2 text-white">
+                <img src="{%static 'images/a5.jfif'%}" class="sicon" height="50px" width="60ox"/>keep it succinct<br/><br/>
+                <img src="{%static 'images/d.jfif'%}" class="sicon" height="50px" width="60ox"/>target your audience<br/><br/>
+                <img src="{%static 'images/th.jfif'%}" class="sicon" height="50px" width="60ox"/>search relevant things<br/><br/>
+            </div>
+            <div class="col-sm-4 bg-dark text-white p-4">
+                <h1>Popular<i class="fa-solid fa-fire"></i>category</h1>
+                LATEST NEWS <i class="fa-solid fa-newspaper"></i><br/>
+                HEALTH <i class="fa-solid fa-notes-medical"></i><br/>
+                VIDEO NEWS <i class="fa-solid fa-video"></i><br/>
+                ENTERTAINMENT <i class="fa-solid fa-camera"></i><br/>
+                CRIME <i class="fa-solid fa-handcuffs"></i><br/>
+                SPORTS <i class="fa-solid fa-medal"></i><br/>
+            </div>
+        </div>
+    <div class="row bfooter a  ">
+        <div class="col-sm-6 text-white  "><a href="/user/developer/"  style="text-decoration:none;color:black;"><b>Created By.<i>Yadav Adesh</i></b></a>
+            <a href="https://www.facebook.com/adesh.yadav.92372446"> <i class="fa-brands fa-facebook sicon"></i></a>
+            <a href="https://www.youtube.com/channel/UC0fy22virwVvSH6S22nswtA"> <i class="fa-brands fa-youtube sicon"></i></a>
+            <a href="https://twitter.com/adeshyadavkads"><i
+                    class=""></i></a>
+            <a href="https://www.instagram.com/adeshyaduvanshi138/"> <i class="fa-brands fa-instagram sicon"></i></a>
+            <a href="https://twitter.com/adeshyadavkads"> <i class="fa-solid fa-envelope sicon"></i></a></div>
+
+        <div class="col-sm-6  text-white "><a href="https://www.techpile.in" target="_blank" class="sicon" style="text-decoration:none;color:black;"><b >©Techpile Technology Pvt.td.</b></a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

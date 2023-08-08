@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}
+ Details
+{% endblock %}
+{% block x%}
+<div class="fs-2 text-center" xmlns="http://www.w3.org/1999/html">News<b class="text-mycolor">Details</b></div><br>
+<div class="row">
+
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+   <div class="row">
+       {% for i in ndata %}
+        <div class="card">
+        <div class="row">
+        <div class="col-sm-4">
+            <img src="/{{i.npic}}" class="img-thumbnail"/></div>
+        <div class="col-sm-8">
+            <div class="card-title">
+
+            <h5>{{i.ntite}}</h5>
+            <b>{{i.nhead}}</b><br>
+                <p class="card-title">{{i.ndes}}</p>
+
+
+
+            <span class="btn btn-outline-danger sicon btn-sm bg-mycolor">{{i.category}}</span>
+            <span class="btn btn-outline-danger sicon bg-mycolor btn-sm">{{i.ncity}}</span><br/>
+
+
+          <span class="text-muted float-end">{{i.ndate}}</span>
+                <i class="fa-solid float-end fa-calendar"> date:</i>
+        </div>
+    </div>
+    </div>
+        </div>
+       {% endfor %}
+   </div>
+
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+{% endblock %}
